@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Blogs - SantriKoding.com</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+</head>
+
+<body style="background: lightgray">
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <% if (messages.error) { %>
+                    <div class="alert alert-danger" role="alert"><%- messages.error %></div>
+                <% } %>
+                <div class="card border-0 shadow rounded">
+                    <div class="card-body">
+                        <form action="/kegiatan_gereja/update/<%= id_kegiatan %>" method="post">
+                            <div class="form-group">
+                                <label>Nama Kegiatan</label>
+                                <input type="text" class="form-control" name="nama_kegiatan" value="<%= nama_kegiatan %>" placeholder="Masukkan Nama Kegiatan Post">
+                            </div>
+                            <div class="form-group">
+                                <label>Tanggal Kegiatan</label>
+                                <input type="text" class="form-control" name="tanggal_kegiatan" value="<%= tanggal_kegiatan %>" placeholder="Masukkan Tanggal Kegiatan Post">
+                            </div>
+                            <div class="form-group">
+                                <label>Jam Kegiatan</label>
+                                <input type="text" class="form-control" name="jam_kegiatan" value="<%= jam_kegiatan %>" placeholder="Masukkan Jam Kegiatan Post">
+                            </div>
+                            <div class="form-group">
+                                <label>Lokasi Kegiatan</label>
+                                <input type="text" class="form-control" name="lokasi_kegiatan" value="<%= lokasi_kegiatan %>" placeholder="Masukkan Lokasi Kegiatan Post">
+                            </div>
+                            <button type="submit" class="btn btn-primary">UPDATE</button>
+                            <button type="reset" class="btn btn-warning">RESET</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    </script>
+</body>
+</html>
