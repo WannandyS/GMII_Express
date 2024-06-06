@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" PDF Informasi Retret="wid_retretth=device-wid_retretth, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" PDF Informasi Retret="ie=edge">
     <title>Data Blogs - SantriKoding.com</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
@@ -24,15 +24,13 @@
 
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
-                        <a href="/kegiatan_gereja/create" class="btn btn-md btn-success mb-3">TAMBAH POST</a>
+                        <a href="/retret/create" class="btn btn-md btn-success mb-3">TAMBAH POST</a>
                         <table class="table table-bordered">
                             <thead>
                               <tr>
-                                <th scope="col">ID Kegiatan</th>
-                                <th scope="col">Nama Kegiatan</th>
-                                <th scope="col">Tanggal Kegiatan</th>
-                                <th scope="col">Jam Kegiatan</th>
-                                <th scope="col">Lokasi Kegiatan</th>
+                                <th scope="col">ID Retret</th>
+                                <th scope="col">Informasi Retret</th>
+                                <th scope="col">PDF Informasi Retret</th>
                                 <th scope="col">Aksi</th>
                               </tr>
                             </thead>
@@ -42,20 +40,18 @@
                                     for(var i = 0; i< data.length; i++) {%>  
                                         <tr>
                                             <th scope="row" class="text-center"><%= (i+1) %></th>
-                                            <td><%= data[i].nama_kegiatan%></td>
-                                            <td><%= data[i].tanggal_kegiatan%></td>
-                                            <td><%= data[i].jam_kegiatan%></td>
-                                            <td><%= data[i].lokasi_kegiatan%></td>
+                                            <td><%= data[i].informasi_retret%></td>
+                                            <td><%= data[i].file_informasi_retret%></td>
                                             <td class="text-center">
-                                                <a href="/kegiatan_gereja/edit/<%=data[i].id_kegiatan%>" class="btn btn-sm btn-primary">EDIT</a>
-                                                <a onclick="return alert('Are You sure?')" href="/kegiatan_gereja/delete/<%=data[i].id_kegiatan%>" class="btn btn-sm btn-danger">HAPUS</a>
+                                                <a href="/retret/edit/<%=data[i].id_retret%>" class="btn btn-sm btn-primary">EDIT</a>
+                                                <a onclick="return alert('Are You sure?')" href="/retret/delete/<%=data[i].id_retret%>" class="btn btn-sm btn-danger">HAPUS</a>
                                             </td>
                                         </tr>
                                     <% }
                                     
                                 }else{ %>
                                     <tr>
-                                        <td colspan="5">
+                                        <td colspan="4">
                                             <div class="alert alert-danger" role="alert">
                                                 Data Tidak Ditemukan !
                                             </div>

@@ -11,6 +11,7 @@ var session = require('express-session');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var postsRouter = require('./routes/posts');
+var retretRouter = require('./routes/retret');
 var kegiatan_gerejaRouter = require('./routes/kegiatan_gereja'); // <-- route posts
 
 var app = express();
@@ -40,6 +41,7 @@ app.use(flash())
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/posts', postsRouter);
+app.use('/retret', retretRouter);
 app.use('/kegiatan_gereja', kegiatan_gerejaRouter); // use route posts di Express
 
 // catch 404 and forward to error handler
