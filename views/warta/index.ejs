@@ -2,14 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="wid_wartath=device-wid_wartath, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Data Blogs - SantriKoding.com</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <meta name="viewport" bacaan_warta="wid_wartath=device-wid_wartath, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" bacaan_warta="ie=edge">
+    <title>Data Warta Gereja</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 <body style="background: lightgray">
-
+    <nav class="top-navbar">
+        <!-- Navbar-->
+        <a href="#">GMII Akcaya</a>
+    </nav>
+    <div class="sidebar">
+                <div class="sidebar-menu">
+                        <ul>
+                            <li class="nav-link">
+                                <a href="/kegiatan_gereja"><i class="fas fa-angle-right"></i> Kegiatan Gereja</a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="/warta"><i class="fas fa-angle-right"></i> Warta Gereja</a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="/retret"><i class="fas fa-angle-right"></i> Retret</a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="./"><i class="fas fa-angle-right"></i> Log Out</a>
+                            </li>
+                        </ul>
+                </div>
+                <div class="sidebar-footer">
+                    <div class="small">Log in as:</div>
+                    <strong>Admin</strong>
+                </div>
+    </div>
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-12">
@@ -24,14 +49,14 @@
 
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
-                        <a href="/warta/create" class="btn btn-md btn-success mb-3">TAMBAH POST</a>
+                        <a href="/warta/create" class="btn1">TAMBAH POST</a>
                         <table class="table table-bordered">
                             <thead>
                               <tr>
-                                <th scope="col">NO.</th>
-                                <th scope="col">JUDUL POST</th>
-                                <th scope="col">CONTENT</th>
-                                <th scope="col">AKSI</th>
+                                <th scope="col">ID Warta</th>
+                                <th scope="col">Tanggal Warta</th>
+                                <th scope="col">Bacaan Warta</th>
+                                <th scope="col">Aksi</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -40,11 +65,11 @@
                                     for(var i = 0; i< data.length; i++) {%>  
                                         <tr>
                                             <th scope="row" class="text-center"><%= (i+1) %></th>
-                                            <td><%= data[i].title%></td>
-                                            <td><%= data[i].content%></td>
+                                            <td><%= data[i].tanggal_warta%></td>
+                                            <td><%= data[i].bacaan_warta%></td>
                                             <td class="text-center">
-                                                <a href="/warta/edit/<%=data[i].id_warta%>" class="btn btn-sm btn-primary">EDIT</a>
-                                                <a onclick="return alert('Are You sure?')" href="/warta/delete/<%=data[i].id_warta%>" class="btn btn-sm btn-danger">HAPUS</a>
+                                                <a href="/warta/edit/<%=data[i].id_warta%>" class="btn2">EDIT</a>
+                                                <a onclick="return alert('Are You sure?')" href="/warta/delete/<%=data[i].id_warta%>" class="btn3">HAPUS</a>
                                             </td>
                                         </tr>
                                     <% }
@@ -53,13 +78,14 @@
                                     <tr>
                                         <td colspan="4">
                                             <div class="alert alert-danger" role="alert">
-                                                Data Tid_wartaak Ditemukan !
+                                                Data Tidak Ditemukan !
                                             </div>
                                         </td>
                                     </tr>
                                 <% } %>    
-                            </tbody>
-                        </table>  
+                                </tbody>
+                            </table>  
+                        </div>
                     </div>
                 </div>
             </div>
