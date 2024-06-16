@@ -75,12 +75,6 @@ ul li:hover a {
   line-height: 1.7;
 }
 
-/*.table-container{
-  display: flex;
-  justify-content: center;
-  margin: 0 50px;
-}*/
-
 .table{
   display: table;
   overflow-x: auto;
@@ -102,7 +96,7 @@ ul li:hover a {
 }
 
 .card{
-  margin: 50px 200px 0 300px;
+  margin: 50px 20px 100px 240px;
 }
 
 .btn1 {

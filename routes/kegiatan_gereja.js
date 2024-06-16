@@ -290,4 +290,19 @@ router.get('/delete/(:id_kegiatan)', function(req, res, next) {
     })
 })
 
+router.get('/fe', function(req, res, next) {
+    //query
+    connection.query('SELECT * FROM kegiatan_gereja ORDER BY id_kegiatan desc', function (err, rows) {
+        if (err) {
+            req.flash('error', err);
+            res.status(500).json({
+                error: 'internal server error'
+            })
+        } else {
+            
+            res.json(rows)
+        }
+    });
+})
+
 module.exports = router;

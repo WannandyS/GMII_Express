@@ -210,4 +210,19 @@ router.get('/delete/(:id_warta)', function(req, res, next) {
     })
 })
 
+router.get('/fe', function(req, res, next) {
+        //query
+        connection.query('SELECT * FROM warta ORDER BY id_warta desc', function (err, rows) {
+            if (err) {
+                req.flash('error', err);
+                res.status(500).json({
+                    error: 'internal server error'
+                })
+            } else {
+                
+                res.json(rows)
+            }
+        });
+})
+
 module.exports = router;
