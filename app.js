@@ -11,8 +11,9 @@ var session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
+var adminRouter = require('./routes/admin')
+var registerRouter = require('./routes/register');
 var usersRouter = require('./routes/users');
-var postsRouter = require('./routes/posts');
 var retretRouter = require('./routes/retret');
 var wartaRouter = require('./routes/warta');
 var kegiatan_gerejaRouter = require('./routes/kegiatan_gereja'); // <-- route posts
@@ -44,11 +45,16 @@ app.use(flash())
 
 app.use('/', indexRouter);
 app.use('/login', loginRouter);
+app.use('/admin', adminRouter);
+app.use('/register', registerRouter);
 app.use('/users', usersRouter);
-app.use('/posts', postsRouter);
 app.use('/retret', retretRouter);
-app.use('/warta',wartaRouter);
+app.use('/warta', wartaRouter);
 app.use('/kegiatan_gereja', kegiatan_gerejaRouter); // use route posts di Express
+
+app.get('/GMII', function(req, res) {
+  res.sendFile(path.join(__dirname, 'public/GMII/index.html'));
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
