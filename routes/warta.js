@@ -30,7 +30,7 @@ router.get('/', function (req, res, next) {
 router.get('/create', function (req, res, next) {
     res.render('warta/create', {
         tanggal_warta: '',
-        bacaan_warta: ''
+        link_file_bacaan_warta: ''
     })
 })
 
@@ -41,7 +41,7 @@ router.post('/store', function (req, res, next) {
     
 
     let tanggal_warta   = req.body.tanggal_warta;
-    let bacaan_warta = req.body.bacaan_warta;
+    let link_file_bacaan_warta = req.body.link_file_bacaan_warta;
     let errors  = false;
 
     if(tanggal_warta.length === 0) {
@@ -52,11 +52,11 @@ router.post('/store', function (req, res, next) {
         // render to add.ejs with flash message
         res.render('warta/create', {
             tanggal_warta: tanggal_warta,
-            bacaan_warta: bacaan_warta
+            link_file_bacaan_warta: link_file_bacaan_warta
         })
     }
 
-    if(bacaan_warta.length === 0) {
+    if(link_file_bacaan_warta.length === 0) {
         errors = true;
 
         // set flash message
@@ -64,7 +64,7 @@ router.post('/store', function (req, res, next) {
         // render to add.ejs with flash message
         res.render('warta/create', {
             tanggal_warta: tanggal_warta,
-            bacaan_warta: bacaan_warta
+            link_file_bacaan_warta: link_file_bacaan_warta
         })
     }
 
@@ -73,7 +73,7 @@ router.post('/store', function (req, res, next) {
 
         let formData = {
             tanggal_warta: tanggal_warta,
-            bacaan_warta: bacaan_warta
+            link_file_bacaan_warta: link_file_bacaan_warta
         }
         
         // insert query
@@ -85,7 +85,7 @@ router.post('/store', function (req, res, next) {
                 // render to add.ejs
                 res.render('warta/create', {
                     tanggal_warta: formData.tanggal_warta,
-                    bacaan_warta: formData.bacaan_warta                    
+                    link_file_bacaan_warta: formData.link_file_bacaan_warta                    
                 })
             } else {                
                 req.flash('success', 'Data Berhasil Disimpan!');
@@ -117,7 +117,7 @@ router.get('/edit/(:id_warta)', function(req, res, next) {
             res.render('warta/edit', {
                 id_warta:      rows[0].id_warta,
                 tanggal_warta:   rows[0].tanggal_warta,
-                bacaan_warta: rows[0].bacaan_warta
+                link_file_bacaan_warta: rows[0].link_file_bacaan_warta
             })
         }
     })
@@ -130,7 +130,7 @@ router.post('/update/:id_warta', function(req, res, next) {
 
     let id_warta      = req.params.id_warta;
     let tanggal_warta   = req.body.tanggal_warta;
-    let bacaan_warta = req.body.bacaan_warta;
+    let link_file_bacaan_warta = req.body.link_file_bacaan_warta;
     let errors  = false;
 
     if(tanggal_warta.length === 0) {
@@ -142,11 +142,11 @@ router.post('/update/:id_warta', function(req, res, next) {
         res.render('warta/edit', {
             id_warta:         req.params.id_warta,
             tanggal_warta:      tanggal_warta,
-            bacaan_warta:    bacaan_warta
+            link_file_bacaan_warta:    link_file_bacaan_warta
         })
     }
 
-    if(bacaan_warta.length === 0) {
+    if(link_file_bacaan_warta.length === 0) {
         errors = true;
 
         // set flash message
@@ -155,7 +155,7 @@ router.post('/update/:id_warta', function(req, res, next) {
         res.render('warta/edit', {
             id_warta:         req.params.id_warta,
             tanggal_warta:      tanggal_warta,
-            bacaan_warta:    bacaan_warta
+            link_file_bacaan_warta:    link_file_bacaan_warta
         })
     }
 
@@ -164,7 +164,7 @@ router.post('/update/:id_warta', function(req, res, next) {
  
         let formData = {
             tanggal_warta: tanggal_warta,
-            bacaan_warta: bacaan_warta
+            link_file_bacaan_warta: link_file_bacaan_warta
         }
 
         // update query

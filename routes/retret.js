@@ -29,7 +29,7 @@ router.get('/', function (req, res, next) {
  */
 router.get('/create', function (req, res, next) {
     res.render('retret/create', {
-        file_informasi_retret: '',
+        link_file_informasi_retret: '',
         informasi_retret: ''
     })
 })
@@ -40,18 +40,18 @@ router.get('/create', function (req, res, next) {
 router.post('/store', function (req, res, next) {
     
 
-    let file_informasi_retret   = req.body.file_informasi_retret;
+    let link_file_informasi_retret   = req.body.link_file_informasi_retret;
     let informasi_retret = req.body.informasi_retret;
     let errors  = false;
 
-    if(file_informasi_retret.length === 0) {
+    if(link_file_informasi_retret.length === 0) {
         errors = true;
 
         // set flash message
-        req.flash('error', "Silahkan Masukkan file_informasi_retret");
+        req.flash('error', "Silahkan Masukkan link_file_informasi_retret");
         // render to add.ejs with flash message
         res.render('retret/create', {
-            file_informasi_retret: file_informasi_retret,
+            link_file_informasi_retret: link_file_informasi_retret,
             informasi_retret: informasi_retret
         })
     }
@@ -63,7 +63,7 @@ router.post('/store', function (req, res, next) {
         req.flash('error', "Silahkan Masukkan Konten");
         // render to add.ejs with flash message
         res.render('retret/create', {
-            file_informasi_retret: file_informasi_retret,
+            link_file_informasi_retret: link_file_informasi_retret,
             informasi_retret: informasi_retret
         })
     }
@@ -72,7 +72,7 @@ router.post('/store', function (req, res, next) {
     if(!errors) {
 
         let formData = {
-            file_informasi_retret: file_informasi_retret,
+            link_file_informasi_retret: link_file_informasi_retret,
             informasi_retret: informasi_retret
         }
         
@@ -84,7 +84,7 @@ router.post('/store', function (req, res, next) {
                  
                 // render to add.ejs
                 res.render('retret/create', {
-                    file_informasi_retret: formData.file_informasi_retret,
+                    link_file_informasi_retret: formData.link_file_informasi_retret,
                     informasi_retret: formData.informasi_retret                    
                 })
             } else {                
@@ -116,7 +116,7 @@ router.get('/edit/(:id_retret)', function(req, res, next) {
             // render to edit.ejs
             res.render('retret/edit', {
                 id_retret:      rows[0].id_retret,
-                file_informasi_retret:   rows[0].file_informasi_retret,
+                link_file_informasi_retret:   rows[0].link_file_informasi_retret,
                 informasi_retret: rows[0].informasi_retret
             })
         }
@@ -129,19 +129,19 @@ router.get('/edit/(:id_retret)', function(req, res, next) {
 router.post('/update/:id_retret', function(req, res, next) {
 
     let id_retret      = req.params.id_retret;
-    let file_informasi_retret   = req.body.file_informasi_retret;
+    let link_file_informasi_retret   = req.body.link_file_informasi_retret;
     let informasi_retret = req.body.informasi_retret;
     let errors  = false;
 
-    if(file_informasi_retret.length === 0) {
+    if(link_file_informasi_retret.length === 0) {
         errors = true;
 
         // set flash message
-        req.flash('error', "Silahkan Masukkan file_informasi_retret");
+        req.flash('error', "Silahkan Masukkan link_file_informasi_retret");
         // render to edit.ejs with flash message
         res.render('retret/edit', {
             id_retret:         req.params.id_retret,
-            file_informasi_retret:      file_informasi_retret,
+            link_file_informasi_retret:      link_file_informasi_retret,
             informasi_retret:    informasi_retret
         })
     }
@@ -154,7 +154,7 @@ router.post('/update/:id_retret', function(req, res, next) {
         // render to edit.ejs with flash message
         res.render('retret/edit', {
             id_retret:         req.params.id_retret,
-            file_informasi_retret:      file_informasi_retret,
+            link_file_informasi_retret:      link_file_informasi_retret,
             informasi_retret:    informasi_retret
         })
     }
@@ -163,7 +163,7 @@ router.post('/update/:id_retret', function(req, res, next) {
     if( !errors ) {   
  
         let formData = {
-            file_informasi_retret: file_informasi_retret,
+            link_file_informasi_retret: link_file_informasi_retret,
             informasi_retret: informasi_retret
         }
 
