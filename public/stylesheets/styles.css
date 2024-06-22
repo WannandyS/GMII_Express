@@ -127,3 +127,9 @@ ul li:hover a {
   padding: 8px;
   border-radius: 5px;
 }
+
+.card-body > h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 450px;
+  padding: 50px 0px 50px 0px;
+}
