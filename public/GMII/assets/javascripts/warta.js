@@ -5,9 +5,9 @@ fetch("http://localhost:3000/warta/fe").then((res) => res.json()).then((res) => 
     const warta = document.createElement("div");
     const link1 = document.createElement("a");
     const link2 = document.createElement("a");
-    link1.href = row.bacaan_warta;
+    link1.href = row.link_file_bacaan_warta;
     const image = document.createElement("img");
-    image.src = "assets/gambar/fotowarta.svg";
+    image.src = "assets/images/fotowarta.svg";
     link2.href = row.bacaan_warta;
     const para = document.createElement("p");
     const node = document.createTextNode (row.tanggal_warta);

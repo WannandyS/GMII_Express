@@ -8,7 +8,7 @@ fetch("http://localhost:3000/kegiatan_gereja/fe").then((res) => res.json()).then
     const waktu = document.createElement("div");
     const jalan = document.createElement("div");
     const image1 = document.createElement("img");
-    image1.src = "assets/gambar/fotodoa.jpg";
+    image1.src = "assets/images/fotodoa.jpg";
     const para1 = document.createElement("h2");
     const node1 = document.createTextNode(row.tanggal_kegiatan);
     const para2 = document.createElement("h5");
@@ -16,7 +16,7 @@ fetch("http://localhost:3000/kegiatan_gereja/fe").then((res) => res.json()).then
     const para3 = document.createElement("h5");
     const node3 = document.createTextNode(row.nama_kegiatan);
     const image2 = document.createElement("img");
-    image2.src = "assets/gambar/location.png";
+    image2.src = "assets/images/location.png";
     const para4 = document.createElement("p");
     const node4 = document.createTextNode(row.lokasi_kegiatan);
     
