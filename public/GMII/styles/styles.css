@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+main {
+  display: flex;
+  flex-wrap: nowrap;
+  height: -webkit-fill-availeble;
+  max-width: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.top-navbar {
+  position: sticky;
+  width: 100%;
+  height: 55px;
+  background: #212529;
+}
+
+.top-navbar > a {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  line-height: 60px;
+  margin-left: 22px;
+}
+
+.sidebar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  width: 220px;
+  height: calc(100dvh - 55px);
+  background: #212529;;
+  transition: all 0.5s ease;
+  justify-content: space-between;
+}
+
+.sidebar ul a {
+  margin-top: 10px;
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 40px;
+  font-size: 15px;
+  color: #6c757d;
+  padding-left: 20px;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+}
+
+ul li:hover a {
+  padding-left: 50px;
+  color: white;
+}
+
+.sidebar-footer {
+  font-size: 15px;
+  background-color: #343a40;
+  color: #adb5bd;
+  padding: 15px 0px 15px 20px;
+  line-height: 1.7;
+}
+
+.table{
+  display: table;
+  overflow-x: auto;
+  border: 2px solid #212529;
+  margin-top: 10px;
+}
+.table th,
+.table td {
+  margin-left: 400px;
+  padding: 20px;
+  border: 2px solid #212529;
+}
+
+.card-body{
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 14px 0px #adb5bd;
+}
+
+.card{
+  margin: 50px 20px 100px 240px;
+}
+
+.btn1 {
+  text-decoration: none;
+  color: white;
+  background-color: green;
+  border-color: green;
+  border-radius: 5px;
+  display: flex;
+  width: fit-content;
+  padding: 8px;
+}
+
+.btn2 {
+  text-decoration: none;
+  color: white;
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.btn3 {
+  text-decoration: none;
+  color: white;
+  background-color: red;
+  border-color: red;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.card-body > h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 450px;
+  padding: 50px 0px 50px 0px;
+}

@@ -1,0 +1,605 @@
+body {
+    background-color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #2D2D2D;
+    display: flex;
+    flex-direction: column;
+}
+
+footer > p {
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    width: 50px;
+    float: left;
+    margin: 10px 10px 10px 20px;
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: white;
+}
+
+nav .popup-login {
+    width: 100px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0158C1;
+    outline: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav .popup-login:hover {
+    background: #0158C1;
+    color: white;
+}
+
+.top-left h3 {
+    text-align: justify;
+    margin-left: 80px;
+    margin-top: 10px;
+}
+
+.top-right {
+    float: right;
+    margin-top: 12px;
+    margin-right: 240px;
+    font-weight: 500;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    position: relative;
+}
+
+li a:hover {
+    background-color:lightgrey;
+}
+
+/*beranda*/
+.bannerberanda {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    margin-top: -8px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.bannerberanda > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 80%;
+    filter: brightness(80%);
+}
+
+.bannerberanda > .teks1, .teks2, h1 {
+    text-shadow: 5px;
+}
+
+.teks1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -215%);
+    color:white;
+    font-size: 45px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.teks2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    color:white;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.bannerberanda > h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    color:white;
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.deskripsi {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.teks {
+    flex-direction: column;
+    display: flex;
+    margin-left: 45px;
+}
+
+.teks > h2 {
+    margin-top: 20px;
+}
+
+.teks > p {
+    text-align: justify;
+    font-size: 16px;
+    margin-right: 47px;
+    line-height: 2;
+}
+
+.deskripsi > img {
+    width: 1000px;
+    height: 500px;
+    border-radius: 25px;
+    margin-left: 47px;
+}
+
+.lokasi {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.lokasi > h2 {
+    text-align: center;
+    justify-content: center;
+    position: relative;
+}
+
+.kiri > p {
+    margin-left: 210px;
+    line-height: 8px;
+}
+
+.alamat-kontak {
+    font-weight: bold;
+}
+
+.link {
+    text-decoration: none;
+    color: blue;
+}
+
+.kanan {
+    display: flex;
+    justify-content: right;
+}
+
+iframe {
+    width: 55%;
+    height: 430px;
+    position: relative;
+    margin-top: -160px;
+    border-radius: 25px;
+    margin-right: 130px;
+    border: none;
+}
+
+/*tentang kami*/
+.top-page {
+    width: 100%;
+    height: 280px;
+    margin-top: -8px;
+}
+
+.top-page > img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: 0 35%;
+    filter: brightness(80%);
+}
+
+.top-page > h1 {
+    position: absolute;
+    top: 20%;
+    left: 14.6%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    color: white;
+}
+
+.top-page > h2 {
+    position: absolute;
+    top: 26.2%;
+    left: 24.2%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: white;
+}
+
+.utama {
+    display: flex;
+    flex-direction: column;
+}
+
+.subutama, .anggota {
+    margin-top: 35px;
+}
+
+.subutama > h3 {
+    border-bottom: 2px solid black;
+    margin: 50px 100px 0px 100px;
+    padding-bottom: 6px;
+}
+
+.subutama > p {
+    margin: 10px 100px 10px 100px;
+}
+
+.subutama > li {
+    margin: 10px 100px 10px 100px;
+}
+
+.anggota {
+    display: flex;
+    flex-direction: column;
+}
+
+.anggota > h3 {
+    border-bottom: 2px solid black;
+    margin: 80px 100px 0px 100px;
+    padding-bottom: 9px;
+}
+
+.pengurus {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1500px;
+    align-self: center;
+    gap: 100px;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 80px;
+}
+
+.nama-gelar {
+    display: flex;
+    flex-direction: column;
+}
+
+.nama-gelar > img {
+    width: 220px;
+    height: 260px;
+}
+
+.nama-gelar > h4, i {
+    text-align: center;
+}
+
+.nama-gelar > h4 {
+    margin-top: 4px;
+    font-size: 16px;
+}
+
+.nama-gelar > i {
+    margin-top: -15px;
+    font-size: 12px;
+    color: #2E8FD5;
+    margin-bottom: 20px;
+}
+
+.bannerutama {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-top: -8px;
+}
+
+.bannerutama > img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    margin-top: -8px;
+    object-position: 0 50%;
+    filter: brightness(80%);
+}
+
+.bannerutama > h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+    font-size: 25px;
+    text-align: center;
+}
+
+/*warta*/
+.kontener {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    gap: 35px;
+}
+
+.isiwarta img {
+    width: 200px;
+    height: 280px;
+}
+
+.isiwarta a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.isiwarta {
+    display: inline-block;
+    width: 200px;
+    height: 350px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0px 2px 14px 0px lightgray;
+}
+
+/*kegiatan*/
+.jadwalkegiatan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.jadwalkegiatan > h3 {
+    float: left;
+    margin-left: 300px;
+}
+
+.jadwalkegiatan > a {
+    text-decoration: none;
+}
+
+#calendar {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.kontener1 {
+    width: 980px;
+    margin-left: 300px;
+    margin-top: -20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+}
+
+.left > img {
+    height: 200px;
+    width: 365px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+}
+
+.right > h5 {
+    margin-top: -25px;
+    font-size: 20px;
+}
+
+.jalan {
+    display: flex;
+    flex-direction: row;
+}
+
+.jalan > img {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+}
+
+.jadwal-item {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    box-shadow: 0px 2px 14px 0px lightgray;
+    padding-right: 20px;
+    margin-right: 50px;
+    margin-top: 15px;
+    color: black;
+}
+
+.waktu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.waktu > h2 {
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+.waktu > h5 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.tombol {
+    display: block;
+    margin-top: 20px;
+    width: 930px;
+    border: none;
+    background-color: #0158C1;
+    padding: 14px 28px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    margin-left: 300px;
+}
+
+.program {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.program > h3 {
+    float: left;
+    margin-left: 300px;
+}
+
+.kontener2 {
+    width: 980px;
+    margin-left: 300px;
+    margin-top: -20px;
+    margin-bottom: 40px;
+}
+
+.program-item {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    box-shadow: 0px 2px 14px 0px lightgray;
+    padding-right: 20px;
+    margin-right: 50px;
+    margin-top: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.program-item > img {
+    height: 200px;
+    width: 365px;
+    box-shadow: 0px 2px 14px 0px lightgray;
+}
+
+/*Kerjasama, ibadah, komsel, retret*/
+.banner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-top: -8px;
+}
+
+.banner > img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    margin-top: -8px;
+    object-position: 0 60%;
+    filter: brightness(80%);
+}
+
+.banner > h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+    font-size: 40px;
+    text-align: center;
+}
+
+.deskripsi-kegiatan {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.deskripsi-kegiatan > p {
+    margin: 40px 100px 10px 100px;
+    line-height: 30px;
+    font-size: 15px;
+    text-align: justify;
+}
+
+.deskripsi-kegiatan > img {
+    align-self: center;
+    width: 80px;
+    height: 80px;
+    margin-top: 150px;
+}
+
+.deskripsi-kegiatan > h1 {
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 150px;
+}
+
+.poin-poin {
+    margin: 0px 100px -25px 100px;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+.framework {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.framework > h2 {
+    text-align: center;
+    justify-content: center;
+    position: relative;
+}
+
+.framework > embed {
+    width: 950px;
+    height: 700px;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 50px;
+    margin-left: 285px;
+}
