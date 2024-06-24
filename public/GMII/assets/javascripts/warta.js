@@ -1,5 +1,5 @@
 console.log ('text');
-fetch("https://gmii.gajiin.my.id/warta/fe").then((res) => res.json()).then((res) => {
+fetch("https://gmii.gajiin.my.id/warta").then((res) => res.json()).then((res) => {
     for(const row of res){
     console.log(res);
     const warta = document.createElement("div");
