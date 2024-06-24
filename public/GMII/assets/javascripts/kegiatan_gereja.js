@@ -1,5 +1,5 @@
 console.log ('text');
-fetch("https://gmii.gajiin.my.id/kegiatan_gereja/fe").then((res) => res.json()).then((res) => {
+fetch("https://gmii.gajiin.my.id/kegiatan_gereja").then((res) => res.json()).then((res) => {
     for(const row of res){
     console.log(res);
     const kegiatan_gereja = document.createElement("div");
