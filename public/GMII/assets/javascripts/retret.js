@@ -1,5 +1,5 @@
 console.log ('text');
-fetch("http://localhost:3000/retret/fe").then((res) => res.json()).then((res) => {
+fetch("hhttps://gmii.gajiin.my.id/retret/fe").then((res) => res.json()).then((res) => {
     for(const row of res){
     console.log(res);
     const frame = document.createElement("div");
