@@ -1,7 +1,14 @@
-console.log ('text');
-fetch("http://localhost:3000/kegiatan_gereja/fe").then((res) => res.json()).then((res) => {
-    for(const row of res){
-    console.log(res);
+console.log ('Fetching data from backend...');
+fetch("https://gmii.gajiin.my.id/kegiatan_gereja")
+.then((res) => {
+    if (!res.ok) {
+        throw new Error('Network response was not ok');
+    }
+    return res.json();
+})
+.then((res) => {
+    console.log('Data received:', res);
+    res.forEach((row) => {
     const kegiatan_gereja = document.createElement("div");
     const kiri = document.createElement("div");
     const kanan = document.createElement("div");
@@ -42,7 +49,8 @@ fetch("http://localhost:3000/kegiatan_gereja/fe").then((res) => res.json()).then
     kegiatan_gereja.classList.add("jadwal-item");
     
     document.getElementById("event").appendChild(kegiatan_gereja);
-    }
-}).catch((error) => {
-    console.error(error)
+    });
 })
+.catch((error) => {
+    console.error('Error fetching data:', error);
+});

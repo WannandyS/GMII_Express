@@ -1,7 +1,14 @@
 console.log ('text');
-fetch("http://localhost:3000/warta/fe").then((res) => res.json()).then((res) => {
-    for(const row of res){
-    console.log(res);
+fetch("https://gmii.gajiin.my.id/warta")
+.then((res) => {
+    if (!res.ok) {
+        throw new Error('Network response was not ok');
+    }
+    return res.json();
+})
+.then((res) => {
+    console.log('Data received:', res);
+    res.forEach((row) => {
     const warta = document.createElement("div");
     const link1 = document.createElement("a");
     const link2 = document.createElement("a");
@@ -19,7 +26,8 @@ fetch("http://localhost:3000/warta/fe").then((res) => res.json()).then((res) => 
     warta.appendChild(link2);
     warta.classList.add("isiwarta");
     document.getElementById("bebas").appendChild(warta);
-    }
-}).catch((error) => {
-    console.error(error)
+    });
 })
+.catch((error) => {
+    console.error('Error fetching data:', error);
+});
