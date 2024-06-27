@@ -1,7 +1,9 @@
 console.log ('text');
-fetch("https://gmii.gajiin.my.id/warta").then((res) => res.json()).then((res) => {
-    for(const row of res){
-    console.log(res);
+fetch("https://gmii.gajiin.my.id/warta")
+.then((res) => res.json())
+.then((res) => {
+    res.forEach((row) => {
+    console.log(row);
     const warta = document.createElement("div");
     const link1 = document.createElement("a");
     const link2 = document.createElement("a");
@@ -19,7 +21,8 @@ fetch("https://gmii.gajiin.my.id/warta").then((res) => res.json()).then((res) =>
     warta.appendChild(link2);
     warta.classList.add("isiwarta");
     document.getElementById("bebas").appendChild(warta);
-    }
-}).catch((error) => {
-    console.error(error)
+    });
 })
+.catch((error) => {
+    console.error(error);
+});

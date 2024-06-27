@@ -1,7 +1,9 @@
 console.log ('text');
-fetch("https://gmii.gajiin.my.id/kegiatan_gereja").then((res) => res.json()).then((res) => {
-    for(const row of res){
-    console.log(res);
+fetch("https://gmii.gajiin.my.id/kegiatan_gereja")
+.then((res) => res.json())
+.then((res) => {
+    res.forEach((row) => {
+    console.log(row);
     const kegiatan_gereja = document.createElement("div");
     const kiri = document.createElement("div");
     const kanan = document.createElement("div");
@@ -42,7 +44,8 @@ fetch("https://gmii.gajiin.my.id/kegiatan_gereja").then((res) => res.json()).the
     kegiatan_gereja.classList.add("jadwal-item");
     
     document.getElementById("event").appendChild(kegiatan_gereja);
-    }
-}).catch((error) => {
-    console.error(error)
+    });
 })
+.catch((error) => {
+    console.error(error);
+});
