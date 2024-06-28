@@ -1,16 +1,7 @@
 console.log ('text');
-fetch("https://gmii.gajiin.my.id/warta")
-.then((res) => {
-    if (!res.ok) {
-        throw new Error('Network response was not ok');
-    }
-    return res.json();
-})
-.then((res) => {
-    console.log('Data received:', res);
-    for (let i = 0; i < res.length; i++) {
-        const row = res[i];
-
+fetch("https://gmii.gajiin.my.id/warta/fe").then((res) => res.json()).then((res) => {
+    for(const row of res){
+    console.log(res);
         const warta = document.createElement("div");
         const link1 = document.createElement("a");
         const link2 = document.createElement("a");

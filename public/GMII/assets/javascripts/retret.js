@@ -1,16 +1,7 @@
 console.log ('text');
-fetch("https://gmii.gajiin.my.id/retret")
-.then((res) => {
-    if (!res.ok) {
-        throw new Error('Network response was not ok');
-    }
-    return res.json();
-})
-.then((res) => {
-    console.log('Data received:', res);
-    for (let i = 0; i < res.length; i++) {
-        const row = res[i];
-
+fetch("https://gmii.gajiin.my.id/retret/fe").then((res) => res.json()).then((res) => {
+    for(const row of res){
+    console.log(res);
         const frame = document.createElement("div");
         const para = document.createElement("p");
         const node = document.createTextNode(row.informasi_retret);
