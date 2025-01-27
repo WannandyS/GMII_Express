@@ -1,19 +1,20 @@
 console.log ('text');
-fetch("https://gmii.gajiin.my.id/retret").then((res) => res.json()).then((res) => {
+fetch("https://gmii.gajiin.my.id/retret/fe").then((res) => res.json()).then((res) => {
     for(const row of res){
     console.log(res);
-    const frame = document.createElement("div");
-    const para = document.createElement("p");
-    const node = document.createTextNode(row.informasi_retret);
-    const embed = document.createElement("embed");
-    embed.src = row.link_file_informasi_retret;
-    
-    para.appendChild(node);
-    document.getElementById("mundur").appendChild(para);
-    frame.appendChild(embed);
-    frame.classList.add("framework");
-    document.getElementById("mundur").appendChild(frame);
+        const frame = document.createElement("div");
+        const para = document.createElement("p");
+        const node = document.createTextNode(row.informasi_retret);
+        const embed = document.createElement("embed");
+        embed.src = row.link_file_informasi_retret;
+        
+        para.appendChild(node);
+        document.getElementById("mundur").appendChild(para);
+        frame.appendChild(embed);
+        frame.classList.add("framework");
+        document.getElementById("mundur").appendChild(frame);
     }
-}).catch((error) => {
-    console.error(error)
 })
+.catch((error) => {
+    console.error('Error fetching data:', error);
+});
